@@ -1,2 +1,0 @@
-# Thenameofpublisher
-new repo

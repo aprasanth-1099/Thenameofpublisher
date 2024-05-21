@@ -1,0 +1,67 @@
+{
+    "manifestVersion": 1,
+    "id": "the-unique-name-for-our-extension",
+    "name": "A more friendly name for your extension",
+    "version": "1.0.0",
+    "publisher": "Thenameofpublisher",
+    "public": false,
+    "baseUri": "https://localhost:44300",
+    "targets": [
+        {
+            "id": "Microsoft.VisualStudio.Services"
+        }
+    ],
+    "description": "An extension made by Corné Hoskam to demonstrate how to create an Azure DevOps Extension",
+    "categories": [
+        "Azure Pipelines"
+    ],
+    "icons": {
+        "default": "images/extension-icon.png"
+    },
+    "files": [
+        {
+            "path": "src/buildTask",
+            "packagePath": "buildTask"
+        },
+        {
+            "path": "src/releaseTask",
+            "packagePath": "releaseTask"
+        },
+        {
+            "path": "src/testTask",
+            "packagePath": "testTask"
+        }
+    ],
+    "contributions": [
+        {
+            "id": "buildTask",
+            "type": "ms.vss-distributed-task.task",
+            "targets": [
+                "ms.vss-distributed-task.tasks"
+            ],
+            "properties": {
+                "name": "buildTask"
+            }
+        },
+        {
+            "id": "releaseTask",
+            "type": "ms.vss-distributed-task.task",
+            "targets": [
+                "ms.vss-distributed-task.tasks"
+            ],
+            "properties": {
+                "name": "releaseTask"
+            }
+        },
+        {
+            "id": "testTask",
+            "type": "ms.vss-distributed-task.task",
+            "targets": [
+                "ms.vss-distributed-task.tasks"
+            ],
+            "properties": {
+                "name": "testTask"
+            }
+        }
+    ]
+}

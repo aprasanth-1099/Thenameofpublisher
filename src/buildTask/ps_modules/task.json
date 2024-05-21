@@ -1,0 +1,57 @@
+{
+    "$schema": "https://raw.githubusercontent.com/Microsoft/azure-pipelines-task-lib/master/tasks.schema.json",
+    "id": "b9dfda11-b890-4577-a00f-8efd6253b526",
+    "name": "TheNameOfOurTask",
+    "friendlyName": "The more friendly name for our task!" ,
+    "instanceNameFormat": "The more friendly name for our task!",
+    "description": "The description for the incredibly fancy tutorial extension's task we are developing!",
+    "helpMarkDown": "",
+    "category": "Build",
+    "author": "Corné Hoskam",
+    "version": {
+        "Major": 1,
+        "Minor": 0,
+        "Patch": 0
+    },
+    "groups": [
+        {
+            "name": "inputGroup",
+            "displayName": "Source",
+            "isExpanded": true
+        },
+        {
+            "name": "outputGroup",
+            "displayName": "Output",
+            "isExpanded": true
+        }
+    ],
+    "inputs": [
+        {
+            "name": "InputVariableName1",
+            "type": "string",
+            "label": "The label for our first input",
+            "defaultValue": "",
+            "required": true,
+            "helpMarkDown": "The help text for the first input field",
+            "groupName": "inputGroup"
+        },
+        {
+            "name": "InputVariableName2",
+            "type": "string",
+            "label": "The label for our second input",
+            "defaultValue": "",
+            "required": true,
+            "helpMarkDown": "The help text for the second input field",
+            "groupName": "output"
+        }
+    ],
+    "execution": {
+        "task1": {
+            "target": "task.js1",
+            "platforms": [
+                "windows"
+            ],
+            "workingDirectory": "$(currentDirectory)"
+        }
+    }
+}
